@@ -25,13 +25,13 @@ void MyAudioCallback(void* userdata, Uint8* byteStream, int byteLength)
     for (int i = 0; i < numberOfSamples; i++)
     {
         // sample current value of sine wave
-         double y = sin(2 * 3.14159265359 * 440 * t);
+        double y = sin(2 * 3.14159265359 * 440 * t);
 
         // quantize to Sint16
-         sampleStream[i] = (Sint16) (y * SHRT_MAX);
+        sampleStream[i] = (Sint16) (y * SHRT_MAX);
 
-         // move time forward
-         t += secondsPerSample;
+        // move time forward
+        t += secondsPerSample;
     }
 }
 
